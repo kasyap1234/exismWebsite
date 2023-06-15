@@ -84,7 +84,7 @@ class SimulationInput(BaseModel):
     amplification: AmplificationInput
     site: SiteInput
 
-@app.post("/createSimulation")
+@app.get("/createSimulation")
 async def create_simulation(input: SimulationInput):
     
     time_pads = pyexsim12.TimePads(**input.path.time_pads.dict())
@@ -114,13 +114,13 @@ async def create_simulation(input: SimulationInput):
     return {"path": str(path), "source": str(source), "amplification": str(amplification),"simulation": str(sim)}
 
 
-@app.post("/amplitude")
+@app.get("/amplitude")
 async def amplitude(input: AmplificationInput):
     simulation.create_amp(**input.amplification.site_amp.dict())
     simulation.create_amp(**input.amplification.crustal_amp.dict())
     amplification = Amplification(site_amp=input.amplification.site_amp.filename, crustal_amp=input.amplification.crustal_amp.filename)
     return {"amplification": str(amplification)}
-@app.post("/qfactor")
+@app.get("/qfactor")
 async def qfactor(input: QualityFactorInput):
     quality_factor = pyexsim12.QualityFactor(**input.dict())
     return {"quality_factor": str(quality_factor)}
