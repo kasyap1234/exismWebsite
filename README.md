@@ -1,7 +1,7 @@
 # exismWebsite
 This project uses Fast Api as a backend and React js as a frontend.
 
-Assuming pyexsim12 files were complete
+
 
 ### `POST /createSimulation`
 - Description: Creates a simulation based on the provided input parameters.
