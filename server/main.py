@@ -1,5 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,Body
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+
 from pyexsim12 import Source, SourceSpec, FaultGeom, Hypocenter, Rupture
 from pyexsim12 import Path, TimePads, Crust, GeometricSpreading, QualityFactor, PathDuration, Amplification, simulation
 import numpy as np
@@ -7,6 +9,18 @@ import matplotlib.pyplot as plt
 from fastapi.responses import FileResponse
 import os
 app = FastAPI()
+origins = [
+    "http://localhost:3000",  # Replace this with your frontend app's url
+]
+
+# Add a CORS middleware to the FastAPI application
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 class SourceSpecInput(BaseModel):
     mw: float
     stress_drop: float
@@ -84,8 +98,8 @@ class SimulationInput(BaseModel):
     amplification: AmplificationInput
     site: SiteInput
 
-@app.get("/createSimulation")
-async def create_simulation(input: SimulationInput):
+@app.post("/createSimulation")
+async def create_simulation(input: SimulationInput = Body(...)):
     
     time_pads = pyexsim12.TimePads(**input.path.time_pads.dict())
     crust = pyexsim12.Crust(**input.path.crust.dict())
@@ -128,3 +142,4 @@ async def get_plot():
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
+#/Users/kasyapdharanikota/Desktop/exismWebsite/server/main.py
