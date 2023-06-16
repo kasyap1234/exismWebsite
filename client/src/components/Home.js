@@ -32,6 +32,7 @@ rupture - Rupture(vrup_beta, slip_weights) */}
             <h2> Rupture </h2>
             <TextField id="outlined-basic" label="Vrup Beta" variant="outlined" />
             <TextField id="outlined-basic" label="Slip Weights" variant="outlined" />
+            <br/> 
             <Button variant="contained" onClick={next}> Next </Button>
 
 

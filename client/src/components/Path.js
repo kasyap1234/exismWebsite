@@ -1,7 +1,15 @@
 import React from 'react'
-import {TextField} from '@mui/material'
+import {TextField,Button} from '@mui/material'
+import {useNavigate} from 'react-router-dom'
+
 
 function Path() {
+    const navigate=useNavigate(); 
+    const handleNext=()=>{
+        navigate('/Amplitude'); 
+        }
+
+
   return (
     <div>
 <h2> Time Pads </h2> 
@@ -14,7 +22,12 @@ function Path() {
 <h2> Geometric Spreading </h2> 
 <TextField id="outlined-basic" label="n_seg" variant="outlined" />
 <h2> Quality Factor </h2> 
-<TextField id=""
+<TextField id="outlined-basic" label="q_min" variant="outlined" defaultValue="0.0"/> 
+<TextField id="outlined-basic" label="q_zero" variant="outlined" defaultValue="88"/>
+<TextField id="outlined-basic" label="eta" variant="outlined" defaultValue="0.9"/>
+
+<Button variant="contained" onClick={handleNext}>Next </Button>
+
     </div>
   )
 }
