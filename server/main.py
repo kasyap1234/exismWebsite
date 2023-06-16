@@ -10,9 +10,13 @@ from fastapi.responses import FileResponse
 import os
 app = FastAPI()
 origins = [
-    "http://localhost:3000",  # Replace this with your frontend app's url
+    "http://localhost:3000",  
 ]
-
+slip_matrix = np.array([[0.4, 0.6, 1.2, 1.35, 1.05, 1.2, 0.8, 1.2, 1.8, 1.7, 1.3, 0.9, 0.6],
+                        [0.4, 0.9, 1.3, 1.4, 2.0, 1.8, 1.1, 1.8, 2.7, 2.6, 1.9, 1.3, 0.75],
+                        [0.28, 0.55, 0.9, 1.2, 1.5, 1.7, 1.2, 2.1, 2.6, 2.4, 1.8, 1.2, 0.75],
+                        [0.1, 0.25, 0.6, 0.7, 1.05, 1.35, 1.5, 1.95, 2.1, 1.6, 1.05, 0.75, 0.6],
+                        [0.1, 0.1, 0.3, 0.45, 0.5, 0.7, 1.0, 1.2, 1.2, 0.6, 0.3, 0.2, 0.1]])
 # Add a CORS middleware to the FastAPI application
 app.add_middleware(
     CORSMiddleware,
@@ -40,7 +44,7 @@ class HypocenterInput(BaseModel):
 
 class RuptureInput(BaseModel):
     vrup_beta: float
-    slip_weights: str = "slip_weights.txt"
+    slip_weights: list =slip_matrix 
     risetime: int = 1
     i_slip_weight: int = 0
 
@@ -141,5 +145,3 @@ async def get_plot():
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
-#/Users/kasyapdharanikota/Desktop/exismWebsite/server/main.py
