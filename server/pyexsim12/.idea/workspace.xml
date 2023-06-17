@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9c10521-ffb3-4997-87b8-62fb1eea47b8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../examples/.ipynb_checkpoints/ex1-visualize_inputs-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../examples/compare_with_gmms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../examples/ex1-visualize_inputs.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../examples/misfits.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exsim12/M7,0S100K0,03.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/example_pyexsim12-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NOTES_TO_MYSELF.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../NOTES_TO_MYSELF.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example_pyexsim12.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../example_pyexsim12.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exsim12/ACC.out" beforeDir="false" afterPath="$PROJECT_DIR$/../exsim12/ACC.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exsim12/M7,1S100K0,047.in" beforeDir="false" afterPath="$PROJECT_DIR$/../exsim12/M7,1S100K0,047.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="26ghIpyDrjlm5MEy0jL2a50yTl9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9c10521-ffb3-4997-87b8-62fb1eea47b8" name="Default Changelist" comment="" />
+      <created>1647851060124</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647851060124</updated>
+      <workItem from="1647851061390" duration="2000" />
+      <workItem from="1651775229195" duration="8000" />
+      <workItem from="1651937508873" duration="18000" />
+      <workItem from="1651937784554" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
